@@ -73,7 +73,7 @@ Her algoritma resmi test vektörleriyle (FIPS-197, FIPS 202, RFC, NIST) doğrula
 Server/      Asyncio sunucu: çöz, yaz, yeniden şifrele, ilet
 Client/      İstemci çekirdeği (client_core.py), CLI (client.py), ileride tkinter arayüzü
 common/      Ortak ağ protokolü (protocol.py)
-crypto/      Sıfırdan yazılmış algoritmalar (kex/base.py arayüzü)
+crypto/      Sıfırdan yazılmış algoritmalar (sha3.py; kex/base.py anahtar yöntemi arayüzü)
 Manual_AES/  Manuel AES ve kütüphaneli karşılaştırma betiği
 tests/       Test vektörleri ve birim testleri
 captures/    Wireshark .pcapng kayıtları (güvensiz, güvenli)
