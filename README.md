@@ -48,8 +48,12 @@ Sunucunun IP adresini not alın (`ipconfig` / `ip a`).
 
 ```bash
 cd Client
-python client.py
+python client.py --host <SUNUCU_IP> --name ali
 ```
+
+İkinci istemci için `--name veli` ile ikinci bir terminal ya da bilgisayar kullanın. Yazdığınız satır metin olarak gider, `/file yol/dosya.pdf` ile PDF gönderilir, `/quit` ile çıkılır.
+
+Not: Arayüz (tkinter) hazır olana kadar istemci komut satırından çalışır.
 
 Arayüzde sunucu IP ve portunu girin, modu (güvensiz / güvenli) ve güvenli modda anahtar yöntemini (RSA, DH, ECC, Kyber) seçip bağlanın. Metin kutusundan mesaj yazabilir ya da klasörden PDF seçip gönderebilirsiniz.
 
@@ -67,7 +71,8 @@ Her algoritma resmi test vektörleriyle (FIPS-197, FIPS 202, RFC, NIST) doğrula
 
 ```
 Server/      Asyncio sunucu: çöz, yaz, yeniden şifrele, ilet
-Client/      İstemci çekirdeği ve tkinter arayüzü
+Client/      İstemci çekirdeği (client_core.py), CLI (client.py), ileride tkinter arayüzü
+common/      Ortak ağ protokolü (protocol.py)
 crypto/      Sıfırdan yazılmış algoritmalar (kex/base.py arayüzü)
 Manual_AES/  Manuel AES ve kütüphaneli karşılaştırma betiği
 tests/       Test vektörleri ve birim testleri
